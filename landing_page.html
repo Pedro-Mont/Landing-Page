@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/lp.css">
+</head>
+<body>
+
+    <img src="./foto/logo.jpg" width="8%" class="logo">
+
+   
+    <div class="topo">
+        <a href="" class="botao_topo" id="home">Home</a>
+        <a href="" class="botao_topo">Descrição</a>
+        <a href="" class="botao_topo">Fotos</a>
+        <a href="" class="botao_topo">Trailer</a>
+        <a href="" class="botao_topo">Informações</a>
+    </div>
+
+
+    <div>
+        <img src="./foto/ellie.jpg" width="100%" height="100%">
+    </div>
+
+    <h1 class="tit">The last of us Part I</h1>
+
+    <div class="botComp">
+        <a href="https://store.steampowered.com/app/1888930/The_Last_of_Us_Part_I/" class="comprar">Comprar</a>
+    </div>
+
+    <h2>Descrição:</h2>
+
+    <div class="fotoDesc">
+        <img src="./foto/text.jpg" width="100%">
+        <h1 class="tdesc">Resista e sobreviva.  Reviva o aclamado jogo que deu início a tudo, totalmente reconstruído do zero para o console PlayStation®5.</h2>
+        <p class="desc">Conheça a história emocionante e os personagens inesquecíveis de The Last of Us, vencedor de mais de 200 prêmios de Jogo do Ano. <br>Em uma civilização devastada, em que infectados e sobreviventes veteranos estão à solta, Joel, um protagonista abatido, é contratado para tirar uma garota de 14 anos, Ellie, de uma zona de quarentena militar. No entanto, o que começa como um pequeno serviço se transforma em uma jornada brutal através do país. <br> Inclui a campanha de The Last of Us e o aclamado capítulo anterior à trama, Left Behind, que explora os eventos que mudaram para sempre as vidas de Ellie e sua melhor amiga, Riley.</p><br>
+    </div>
+
+    <h2>Fotos:</h2>
+
+    <div class="fotos">
+        <img src="./foto/am1.jpg" width="30%" id="am">
+        <img src="./foto/am2.jpg" width="30%" id="am">
+        <img src="./foto/am3.jpg" width="30%" id="am">
+    </div>
+
+    <h2>Trailer:</h2>
+
+    <div class="trailer">
+        <iframe width="900" height="500" src=https://www.youtube.com/embed/gEPCEbIiuu8?si=iWCunlivlkVncAlbframeborder="0" allowfullscreen class="vid"></iframe>
+        <p class="trailerDesc">Vencedor de mais de 200 prêmios de Jogo do Ano, e agora reconstruído do zero para o console PlayStation®5.</p>
+    </div>
+    
+    <h2>Novidades:</h2>
+
+    <table>
+        <tr>
+            <th>Reconstruído do zero para PlayStation®5</th>
+            <th>Uma reconstrução fiel</th>
+            <th>Uma experiência totalmente nova</th>
+        </tr>
+        <tr>
+            <td>Completamente reconstruído do zero usando o motor gráfico de PS5™ mais recente da Naughty Dog para garantir uma fidelidade visual avançada, recursos do controle sem fio DualSense™ totalmente integrados e muito mais.</td>
+            <td>Conheça a história emocionante e os personagens inesquecíveis de Joel e Ellie em The Last of Us, e explore os eventos que mudaram para sempre as vidas de Ellie e sua melhor amiga, Riley, no aclamado capítulo anterior à trama, Left Behind.</td>
+            <td>Uma reformulação total da experiência original, reproduzida fielmente, mas incorporando mecânicas de jogabilidade modernas, controles aprimorados e opções de acessibilidade ampliadas. 
+                
+                Sinta uma imersão ainda maior com melhorias na ambientação da trama, efeitos, animações faciais e com exploração e combate aprimorados.</td>
+        </tr>
+    </table>
+
+
+    <div class="vidComp">
+        <h2>Comparação:</h2>
+        <video width="60%" controls>
+            <source src="./foto/comp.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h2>Receba as novidades:</h2>
+
+    <div id="form-nov">
+        <form id="cadastro-user">
+            <label for="txtNome">Nome:</label><br>
+            <input type="text" id="txtNome" name="txtNome" placeholder="Nome..."><br>
+            <span id="error-nome" class="input-error">Nome não preenchido ou incorreto. Revise.</span><br>
+            <label for="txtEmail">Email:</label><br>
+            <input type="text" id="txtEmail" name="txtEmail" placeholder="Email..."><br>
+            <span id="error-email" class="input-error">Email não preenchido ou incorreto. Revise</span><br>
+            <button type="button" onclick="cadastro()">Cadastrar</button>
+            <span id="sucesso" class="sucesso">Cadastro concluido</span>
+        </form>
+    </div>
+
+
+</body>
+
+<script>
+    function cadastro(){
+
+    var nome = document.getElementById("txtNome").value;
+    var email = document.getElementById("txtEmail").value;
+
+    if (nome.length == 0){
+        document.getElementById("error-nome").style.display = "block";
+    } else {
+        document.getElementById("error-nome").style.display = "none";
+    }
+    
+    if (email.length == 0){
+        document.getElementById("error-email").style.display = "block";
+    } else {
+        document.getElementById("error-email").style.display = "none";
+    }
+
+    if (nome.length != 0 && email.length != 0){ 
+        document.getElementById("sucesso").style.display = "block";
+    } else {
+        document.getElementById("sucesso").style.display = "none";
+    }
+}
+</script>
+
+</html>
